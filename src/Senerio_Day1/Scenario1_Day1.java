@@ -34,11 +34,30 @@ public class Scenario1_Day1 {
 
 	@Test
 	public void test() {
-		driver.findElement(By.id("firstName")).sendKeys("Praveen");
-		driver.findElement(By.id("lastName")).sendKeys("Enugula");
-		driver.findElement(By.id("username")).sendKeys("praveenenu1997");
-		driver.findElement(By.name("Passwd")).sendKeys("praven97@$");
-		driver.findElement(By.xpath("//*[@id=\"confirm-passwd\"]/div[1]/div/div[1]/input")).sendKeys("praven97@$");
+		WebElement fir=driver.findElement(By.id("firstName"));
+		fir.sendKeys("Praveen");
+		String f=fir.getAttribute("value");
+		System.out.println("FirstName:"+f);
+		
+		WebElement las=driver.findElement(By.id("lastName"));
+		las.sendKeys("Enugula");
+		String last=las.getAttribute("value");
+		System.out.println("LastName:"+last);
+		WebElement use=driver.findElement(By.id("username"));
+		use.sendKeys("praveenenu1997");
+		String user=use.getAttribute("value");
+		System.out.println("UserName:"+user);
+		
+		
+		WebElement pas=driver.findElement(By.name("Passwd"));
+		pas.sendKeys("praven97@$");
+		String pass=pas.getAttribute("value");
+		System.out.println("Password:"+pass);
+		
+		WebElement pas1=driver.findElement(By.xpath("//*[@id=\"confirm-passwd\"]/div[1]/div/div[1]/input"));
+		pas1.sendKeys("praven97@$");
+		String pass1=pas1.getAttribute("value");
+		System.out.println("ConfirmPassword:"+pass1);
 		driver.findElement(By.xpath("//*[@id=\"accountDetailsNext\"]")).click();
 	/*
 		driver.findElement(By.id("phoneNumberId")).sendKeys("123456781");
