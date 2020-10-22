@@ -27,7 +27,7 @@ public class scenario4_Q1_Customised_xpath {
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		
 	}
 
 	@After
