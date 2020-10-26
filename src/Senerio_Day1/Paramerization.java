@@ -12,7 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 
-public class Paramerization {
+public class Parameterization {
 	WebDriver driver;
 	String url="https://app.simplelogin.io/auth/login";
 	
